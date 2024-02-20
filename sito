@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image Generator</title>
+</head>
+<body>
+    <h1>Random Image Generator</h1>
+    
+    <button onclick="generateRandomImage()">Generate Random Image</button>
+    <div id="image-container"></div>
+
+    <script>
+        function generateRandomImage() {
+            var imageContainer = document.getElementById("image-container");
+            imageContainer.innerHTML = ""; // Clear previous images
+
+            var randomImageUrl = "https://source.unsplash.com/random"; // Use Unsplash as the source for random images
+            var imageElement = document.createElement("img");
+            imageElement.src = randomImageUrl;
+            imageContainer.appendChild(imageElement);
+        }
+    </script>
+</body>
+</html>
